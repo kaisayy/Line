@@ -7,7 +7,7 @@ error_log("start");
 $postData = file_get_contents('php://input');
 error_log($postData);
 
-// jeson化
+// json化
 $json = json_decode($postData);
 $event = $json->events[0];
 error_log(var_export($event, true));
@@ -24,7 +24,7 @@ $replyMessage = null;
 // メッセージタイプが文字列の場合
 if ($event->message->type == "text") {
     //とりあえず今回は少し加工するだけ
-    $replyMessage = "「".$event->message->text."」かよっ!";
+    $replyMessage = "「".$event->message->text."」だおっ!";
 } else {
     $replyMessage = "テキストしかわからない";
 }
