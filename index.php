@@ -59,7 +59,7 @@ function chat($text, $userID, $displayName): string
         'Content-Type: application/json; charset=UTF-8';
     );
     
-    options = array(
+    $options = array(
         'http'=>array(
             'method' => 'POST',
             'header' => implode("\r\n", $headers),
